@@ -1,3 +1,4 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -45,6 +46,19 @@ h2 {
     font-size: 16px;
 }
 
+/* Role Selection - Side by Side */
+.role-options {
+    display: flex;
+    gap: 20px; /* Space between the Landlord and Tenant options */
+}
+
+.role-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between radio button and label text */
+}
+
+/* Password Group with Eye Icon */
 .password-group {
     position: relative;
 }
@@ -53,18 +67,37 @@ h2 {
     position: absolute;
     right: 10px;
     top: 50%;
-    transform: translateY(-15%);  /* Adjusted to lower the eye icon */
+    transform: translateY(-15%);
     cursor: pointer;
-    color: #aaa;  /* Lighter color */
+    color: #aaa;
     font-size: 18px;
     padding: 5px;
     transition: color 0.3s ease;
 }
 
 .password-group i:hover {
-    color: #555;  /* Slightly darker on hover */
+    color: #555;
 }
 
+/* Sign Up and Forgot Password Links */
+.additional-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.additional-options a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.additional-options a:hover {
+    text-decoration: underline;
+}
+
+/* Button Styles */
 button {
     width: 100%;
     padding: 10px;
@@ -74,6 +107,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -111,6 +145,7 @@ button:hover {
     right: 0;
 }
 
+/* Google Login Button */
 .google-login button {
     width: 100%;
     padding: 10px;
@@ -130,27 +165,4 @@ button:hover {
 
 .google-login button:hover {
     background-color: #357ae8;
-}
-
-/* Add this to styles.css */
-.input-group.role-group div {
-    display: flex;
-    gap: 20px;  /* Adds space between the radio buttons */
-    align-items: center;
-}
-
-.input-group.role-group label {
-    display: inline-flex;
-    align-items: center;
-    margin-right: 10px;  /* Adds space between label and radio button */
-}
-
-.error-message {
-    color: red;
-    font-size: 0.9em;
-    margin-top: 10px;
-}
-
-button {
-    margin-top: 10px;
 }
